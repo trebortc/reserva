@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Livewire\Personas;
+use App\Http\Livewire\Tareas;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,4 +26,6 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+    Route::get('/personasvista',Personas::class)->name('personasvistanombre');
+    Route::get('/tareas',Tareas::class)->name('tareas');
 });
